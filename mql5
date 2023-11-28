@@ -1,0 +1,120 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                                     Orion AI MT4 |
+//|                                               Copyright 2022, forexroboteasy.com |
+//|                                                     Forex Robot Easy Team |
+//+------------------------------------------------------------------+
+
+// Define the currency pairs
+string CurrencyPair1 = 'EURUSD';
+string CurrencyPair2 = 'GBPUSD';
+string CurrencyPair3 = 'USDJPY';
+string CurrencyPair4 = 'AUDUSD';
+
+//+------------------------------------------------------------------+
+//|                              Expert Advisor initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+    // Initialize the Orion AI algorithm
+    InitializeOrionAI();
+
+    // Add technical indicators or analysis tools
+    AddIndicators();
+
+    return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//|                                Expert Advisor start function                                                          |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    // Check for trade entry criteria
+    if (CheckEntryCriteria())
+    {
+        // Execute buy/sell order for each currency pair
+        ExecuteOrder(CurrencyPair1);
+        ExecuteOrder(CurrencyPair2);
+        ExecuteOrder(CurrencyPair3);
+        ExecuteOrder(CurrencyPair4);
+    }
+
+    // Check for trade exit criteria
+    if (CheckExitCriteria())
+    {
+        // Close all open orders for each currency pair
+        CloseOrders(CurrencyPair1);
+        CloseOrders(CurrencyPair2);
+        CloseOrders(CurrencyPair3);
+        CloseOrders(CurrencyPair4);
+    }
+}
+
+//+------------------------------------------------------------------+
+//|                          Function to initialize Orion AI algorithm                                               |
+//+------------------------------------------------------------------+
+void InitializeOrionAI()
+{
+    // Code to incorporate the new Orion AI algorithm
+    // ...
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//|                               Function to add technical indicators or analysis tools                       |
+//+------------------------------------------------------------------+
+void AddIndicators()
+{
+    // Code to add technical indicators or analysis tools
+    // ...
+    // ...
+}
+
+//+------------------------------------------------------------------+
+//|                                 Function to check trade entry criteria                                             |
+//+------------------------------------------------------------------+
+bool CheckEntryCriteria()
+{
+    // Code to check trade entry criteria
+    // ...
+    // ...
+
+    return true; // Replace with actual entry criteria check
+}
+
+//+------------------------------------------------------------------+
+//|                                 Function to execute buy/sell order for a currency pair                   |
+//+------------------------------------------------------------------+
+void ExecuteOrder(string currencyPair)
+{
+    // Code to execute buy/sell order for a currency pair
+    // ...
+    // ...
+
+    Print('Order executed for ', currencyPair); // Replace with actual order execution
+}
+
+//+------------------------------------------------------------------+
+//|                                 Function to check trade exit criteria                                               |
+//+------------------------------------------------------------------+
+bool CheckExitCriteria()
+{
+    // Code to check trade exit criteria
+    // ...
+    // ...
+
+    return true; // Replace with actual exit criteria check
+}
+
+//+------------------------------------------------------------------+
+//|                                 Function to close all open orders for a currency pair                   |
+//+------------------------------------------------------------------+
+void CloseOrders(string currencyPair)
+{
+    // Code to close all open orders for a currency pair
+    // ...
+    // ...
+
+    Print('Orders closed for ', currencyPair); // Replace with actual order closing
+}
